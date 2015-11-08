@@ -1,0 +1,114 @@
+/*
+Stylus variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon_home_width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon_home = x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet = width height image $spritesheet_sprites;
+*/
+$partner_1_name = 'partner-1';
+$partner_1_x = 0px;
+$partner_1_y = 120px;
+$partner_1_offset_x = 0px;
+$partner_1_offset_y = -120px;
+$partner_1_width = 120px;
+$partner_1_height = 120px;
+$partner_1_total_width = 242px;
+$partner_1_total_height = 240px;
+$partner_1_image = '../images/sprites/sprites.png';
+$partner_1 = 0px 120px 0px -120px 120px 120px 242px 240px '../images/sprites/sprites.png' 'partner-1';
+$partner_2_name = 'partner-2';
+$partner_2_x = 120px;
+$partner_2_y = 120px;
+$partner_2_offset_x = -120px;
+$partner_2_offset_y = -120px;
+$partner_2_width = 120px;
+$partner_2_height = 120px;
+$partner_2_total_width = 242px;
+$partner_2_total_height = 240px;
+$partner_2_image = '../images/sprites/sprites.png';
+$partner_2 = 120px 120px -120px -120px 120px 120px 242px 240px '../images/sprites/sprites.png' 'partner-2';
+$partner_3_name = 'partner-3';
+$partner_3_x = 0px;
+$partner_3_y = 0px;
+$partner_3_offset_x = 0px;
+$partner_3_offset_y = 0px;
+$partner_3_width = 121px;
+$partner_3_height = 120px;
+$partner_3_total_width = 242px;
+$partner_3_total_height = 240px;
+$partner_3_image = '../images/sprites/sprites.png';
+$partner_3 = 0px 0px 0px 0px 121px 120px 242px 240px '../images/sprites/sprites.png' 'partner-3';
+$partner_4_name = 'partner-4';
+$partner_4_x = 121px;
+$partner_4_y = 0px;
+$partner_4_offset_x = -121px;
+$partner_4_offset_y = 0px;
+$partner_4_width = 121px;
+$partner_4_height = 120px;
+$partner_4_total_width = 242px;
+$partner_4_total_height = 240px;
+$partner_4_image = '../images/sprites/sprites.png';
+$partner_4 = 121px 0px -121px 0px 121px 120px 242px 240px '../images/sprites/sprites.png' 'partner-4';
+$spritesheet_width = 242px;
+$spritesheet_height = 240px;
+$spritesheet_image = '../images/sprites/sprites.png';
+$spritesheet_sprites = $partner_1 $partner_2 $partner_3 $partner_4;
+$spritesheet = 242px 240px '../images/sprites/sprites.png' $spritesheet_sprites;
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  spriteWidth($icon_home)
+}
+
+.icon-email {
+  sprite($icon_email)
+}
+*/
+spriteWidth($sprite) {
+  width: $sprite[4];
+}
+
+spriteHeight($sprite) {
+  height: $sprite[5];
+}
+
+spritePosition($sprite) {
+  background-position: $sprite[2] $sprite[3];
+}
+
+spriteImage($sprite) {
+  background-image: url($sprite[8]);
+}
+
+sprite($sprite) {
+  spriteImage($sprite)
+  spritePosition($sprite)
+  spriteWidth($sprite)
+  spriteHeight($sprite)
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of Stylus
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+sprites($spritesheet_sprites);
+*/
+sprites($sprites) {
+  for $sprite in $sprites {
+    $sprite_name = $sprite[9];
+    .{$sprite_name} {
+      sprite($sprite);
+    }
+  }
+}

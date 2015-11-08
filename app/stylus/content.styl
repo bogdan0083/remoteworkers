@@ -1,0 +1,638 @@
+// PROMO
+	.promo
+		text-align: center
+		color white
+		&__in
+			max-width: 1170px
+			margin: 0 auto
+			padding-top 260px
+			padding-bottom 50px
+			+below(860px)
+				width: 90%
+				padding-top: 60px
+			+below(500px)
+				padding-top: 40px
+		&__text
+			font-size: 17px
+			margin-bottom: 14px
+		&__heading
+			font-size: 31px
+			text-transform: uppercase
+			letter-spacing 2px
+			margin-bottom: 35px
+			color white
+			ms900()
+			+below(860px)
+				font-size 28px
+			+below(500px)
+				font-size 27px
+		&__btn
+			width 184px
+			height: 62px
+			vertical-align: middle
+			background-color #30c6a5
+			background-image linear-gradient(to top, rgba(7, 7, 7, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%)
+			box-shadow 0 0 0 3px rgba(0,0,0, 0.1)
+			border-radius 3px
+			color white
+			line-height: 62px
+			font-size 19px
+			text-transform: uppercase
+			display: inline-block
+			text-align: center
+			&:hover
+				background-image linear-gradient(to bottom, rgba(7, 7, 7, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%)
+			+below(860px)
+				margin-bottom: 70px
+			+below(500px)
+				height: 40px
+				line-height: 40px
+
+// WORKER SEARCH
+
+.worker-search
+	background-color white
+	max-width: 1030px
+	margin: -70px auto 0
+	padding: 30px 30px
+	border 1px solid #e0e7ee
+	+below(650px)
+		padding-left 5%
+		padding-right: 5%
+	clearfix()
+	&__heading
+		float: left
+		ms300()
+		span
+			color $lightgreen
+			margin-right: 3px
+			ms500()
+		+below(650px)
+			margin-bottom: 25px
+	&__advance
+		float: right
+		color $lightgreen
+		&:hover
+			color darken($lightgreen, 10%)
+		+below(650px)
+			clear: left
+			float: left
+			margin-bottom: 5px
+	&__form
+		clear: both
+		margin-top: 36px
+		+below(650px)
+			margin-top: 0
+
+	&__input,
+	&__submit
+		height: 42px
+	&__input
+		border 1px solid #cfd8dc
+		border-radius 3px
+		padding-left 15px
+		padding-right: 25px
+		width: 100%
+	&__input-wrap
+		display: inline-block
+		position: relative
+		margin-right: 28px
+		width: 377px
+		+below(1040px)
+			margin-right: 2%
+			width: 38%
+		+below(860px)
+			width: 34%
+		+below(650px)
+			width: 100%
+			display: block
+			margin: 0 auto 15px
+		&:after
+			content ''
+			position: absolute
+			triangle(9px, 6px, 'bottom', $grey-light)
+			right 12px
+			top 50%
+			margin-top: -4.5px
+			cursor: pointer
+	&__submit
+		background: $lightgreen
+		border none
+		border-radius 3px
+		line-height: 42px
+		font-size: 17px
+		text-align: center
+		width: 156px
+		color: white
+		margin-right: -4px
+		float: right
+		&:hover
+			background darken($lightgreen, 10%)
+		ms300()
+		+below(650px)
+			float: none
+			margin: 0 auto
+
+// DAILY WORKER
+
+.daily-worker
+	&__in
+		max-width 1030px
+		padding-top 98px
+		margin 0 auto
+		+below(760px)
+			padding-bottom: 50px
+		+below(500px)
+			width: 90%
+	&__photo
+		float: left
+		margin-right: 3.8834%
+		margin-left: -10px
+		margin-bottom: -30px
+		+below(760px)
+			width: 150px
+			margin-bottom: 20px
+		+below(500px)
+			float: none
+			margin-bottom: 0
+	&__wrap
+		margin-top: 30px
+		+below(1040px)
+			margin-right: 2%
+
+	&__heading
+		margin-bottom: 35px
+		span
+			color $lightgreen
+	&__about,
+	&__skills
+		margin-bottom: 16px
+		color $darkgrey
+	&__skills
+		+below(760px)
+			clear: left
+	&__desc
+		margin-bottom: 42px
+		color $grey
+		ms300()
+	&__skill
+		display: inline-block
+		line-height: 1.6
+		margin-right: 5px
+	&__price
+		margin-top: 56px
+		margin-right: 28px
+		font-size 25px
+		color $darkgrey
+		display: inline-block
+		span:first-child
+			ms300()
+		span:last-child
+			font-size: 15px
+			vertical-align: top
+	&__toggle
+		width: 230px
+		height: 42px
+		vertical-align: middle
+		border-radius 3px
+		padding 2px
+		margin-top -14px
+		background $lightgreen
+		display: inline-block
+		overflow: hidden
+		+below(500px)
+			width: 100%
+			margin-top: 15px
+	&__profile,
+	&__hire
+		display: inline-block
+		width: 50%
+		line-height: 38px
+		text-align: center
+		margin-right: -4px
+	&__skills,
+	&__list,
+	&__price
+		+below(760px)
+			margin-left: 10%
+		+below(500px)
+			margin-left: 0
+
+.js-toggle
+	color white
+	&_active
+		background: white
+		color $lightgreen
+
+.how-works
+	background-color $lightgreen
+	color white
+	clear: both
+	overflow: hidden
+	position: relative
+	&__in
+		max-width: 1030px
+		margin: 0 auto
+		position: relative
+
+		clearfix()
+
+		+below(760px)
+			padding-bottom 50px
+	&__desc
+		width: 50%
+		float: left
+		padding-right: 90px
+		padding-top: 108px
+		margin-bottom: 30px
+		+below(1140px)
+			padding-top 70px
+			padding-right: 5%
+			padding-left: 5%
+		+below(760px)
+			width: 100%
+			float: none
+	&__heading
+		margin-bottom: 20px
+	&__text
+		line-height: 1.7
+	&__video
+		width: 50%
+		float: right
+		position: relative
+		transition 0.3s opacity
+		+below(760px)
+			width: 100%
+			float: none
+		img
+			display: block
+			+below(760px)
+				width: 100%
+		&:hover
+			cursor pointer
+			opacity 0.7
+		&:before
+			content: ''
+			position: absolute
+			display: block
+			height: 60px
+			width: 61px
+			background-image url("../images/play.svg")
+			background-repeat no-repeat
+			background-size 61px 60px
+			top 50%
+			left 70%
+			margin-top: -(@height / 2)
+			margin-left: -(@width / 2)
+			cursor pointer
+			+below(1140px)
+				left 50%
+	&__more
+		color white
+		height: 78px
+		width: 50%
+		bottom 0
+		left 0
+		position: absolute
+		line-height: 78px
+		background: $green
+		display: block
+		font-size: 21px
+		transition 0.3s background
+		z-index 10
+		ms300()
+		+below(1140px)
+			padding-left: 5%
+		+below(760px)
+			line-height: 50px
+			height: 50px
+			width: 100%
+			text-align: center
+			padding-left: 0
+		&:hover
+			background darken($green, 10%)
+			&::after
+				background darken($green, 10%)
+		&:before
+			content "\f194"
+			display inline-block
+			font normal normal normal 21px/$fa-line-height-base FontAwesome // shortening font declaration
+			text-rendering auto // optimizelegibility throws things off #1094
+			-webkit-font-smoothing antialiased
+			-moz-osx-font-smoothing grayscale
+			margin-right: 6px
+			color white
+		&:after
+			content ''
+			position: absolute
+			left -200px
+			background $green
+			z-index -1
+			height: 78px
+			width: 200px
+			transition 0.3s background
+			+below(760px)
+				display: none
+
+
+// FEATURED
+
+.featured
+	&__in
+		padding-top 100px
+		padding-bottom: 20px
+		max-width: 1030px
+		margin: 0 auto
+		clearfix()
+		+below(760px)
+			padding-top: 50px
+			padding-bottom: 0
+.workers
+	width: 70.87%
+	float: left
+	+below(1090px)
+		float: none
+		width: 95%
+		margin: 0 auto 30px
+	&__table
+		clear: both
+		width: 100%
+		+below(1090px)
+			text-align: center
+	&__desc
+		ms300()
+		margin-bottom: 5px
+		color $darkgrey
+	&__heading
+		float: left
+		margin-bottom: 30px
+		color $darkgrey
+	&__active
+		float: right
+		color: $darkgrey
+		span
+			color $lightgreen
+		+below(700px)
+			float: none
+			margin-bottom: 10px
+			clear: left
+	&__row
+		border 1px solid #e0e7ee
+		height: 100px
+		padding 0 4.10%
+		+below(1090px)
+			padding: 0
+		+below(400px)
+			display: block
+			height: auto
+			padding 20px 0
+			border none
+	&__cell
+		&:first-child
+			padding-left: 4.10%
+		+below(400px)
+			.workers__view
+				margin: 0 auto
+	&__name
+		font-size: 19px
+		color $darkgrey
+	&__prof
+		ms300()
+		+below(400px)
+			margin-bottom: 15px
+	&__price
+		span
+			font-size: 10px
+			vertical-align: top
+	&__view
+		border 1px solid $lightgreen
+		color $lightgreen
+		border-radius 3px
+		font-size 14px
+		padding: 6px 0
+		text-align: center
+		transition 0.3s background, color
+		display: block
+		width: 104px
+		&:hover
+			background: $lightgreen
+			color white
+	&__price,
+	&__time,
+	&__country
+		+below(700px)
+			display: none
+	&__image,
+	&__brief-desc
+	&__btn
+		+below(400px)
+			display: block
+
+.teams
+	float: right
+	+below(1090px)
+		float: none
+		width: 95%
+		margin: 0 auto
+	&__desc
+		margin-bottom: 5px
+		ms300()
+	&__desc,
+	&__heading
+		color $darkgrey
+	&__heading
+		margin-bottom: 40px
+	&__wrap
+		text-align: center
+
+.team
+	width: 232px
+	min-height: 275px
+	border 1px solid #e0e7ee
+	border-radius 3px
+	position: relative
+	display: block
+	text-align: center
+	margin-bottom: 40px
+	overflow: hidden
+	+below(1090px)
+		display: inline-block
+		margin-right: 30px
+	+below(500px)
+		margin: 0 auto 20px
+	&__image
+		display: block
+		transition 0.5s transform
+	&:hover .team__image,
+	&:hover .team__logo
+		transform scale(1.4)
+	&__logo
+		position absolute
+		top 68px
+		left: 0
+		width: 100%
+		transition 0.5s transform
+		&_unfold
+			top 52px
+		img
+			display: inline-block
+			margin-bottom: 10px
+	&__name
+		color white
+		font-size 19px
+		ms300()
+	&__info
+		display: table
+		text-align: center
+		width: 100%
+		height: 50px
+		position: relative
+		background: white
+		.team__time,
+		.team__country
+			vertical-align: middle
+			display table-cell
+	&__time
+		color $lightgreen
+
+.icon-tablet
+	width: 19px
+	height: 25px
+.icon-brush
+	width: 19px
+	height: 19px
+.icon-person
+	width: 22px
+	height: 20px
+
+.why
+	position: relative
+	overflow: hidden
+	&__in
+		border-top: 1px solid #e0e7ee
+		max-width: 1170px
+		margin: 0 auto
+		padding: 130px 60px 90px
+		+below(1140px)
+			width: 95%
+			padding-left 0
+			padding-right 0
+		+below(800px)
+			padding-top: 60px
+			padding-bottom: 50px
+	&__desc
+		margin-bottom: 5px
+		ms300()
+	&__heading
+		color $darkgrey
+		margin-bottom: 43px
+		position: relative
+	&__image
+		position: absolute
+		right: 0px
+		top: 150px
+		+below(1240px)
+			right -50px
+		+below(1140px)
+			right: -200px
+		+below(960px)
+			right: -350px
+		+below(800px)
+			display: none
+.feature
+	margin-bottom: 42px
+	max-width: 515px
+	&:last-child
+		margin-bottom: 5px
+	&__heading
+		color $darkgrey
+		margin-bottom: 15px
+		position: relative
+		padding-left: 30px
+	&__text
+		color $darkgrey
+		ms300()
+	&_skill
+		.feature__heading
+			&:before
+				content ''
+				position: absolute
+				background url('../images/tablet.svg') no-repeat
+				width: 21px
+				height: 25px
+				top -2px
+				left 0
+	&_track
+		.feature__heading
+			&:before
+				content ''
+				position: absolute
+				background url('../images/brush.svg') no-repeat
+				width: 21px
+				height: 19px
+				top -2px
+				left 0
+	&_browse
+		.feature__heading
+			&:before
+				content ''
+				position: absolute
+				background url('../images/person.svg') no-repeat
+				width: 21px
+				height: 20px
+				top -3px
+				left 0
+
+// TESTIMONIALS
+	.testimonials
+		min-height: 475px
+		background url('../images/testimonials-bg.jpg') no-repeat center
+		+below(860px)
+			min-height: 400px
+		&__in
+			max-width: 1030px
+			margin: 0 auto
+			min-height inherit
+			position: relative
+			+below(860px)
+				padding-top: 60px
+				padding-bottom: 40px
+		&__slider-wrap
+			max-width: 370px
+			background-color white
+			box-shadow inset 0 -4px 13px rgba(7, 7, 7, 0.16)
+			padding 50px 70px 80px 40px
+			margin: 0 auto
+			position: absolute
+			bottom 0
+			left 50%
+			margin-left: -185px
+			overflow: visible
+			&:before
+				content ''
+				position: absolute
+				width: 64px
+				height: 64px
+				background-color white
+				background-image url('../images/quotes.svg')
+				background-repeat no-repeat
+				background-position center center
+				box-shadow 2.5px 1.7px 0 rgba(38, 50, 56, 0.1)
+				top -32px
+				left -32px
+				border-radius 50%
+			+below(860px)
+				position: relative
+				top auto
+				left auto
+				margin: 0 auto
+				padding 30px 20px 60px 20px
+.slider
+	&__text
+		ms300()
+		margin-bottom: 25px
+	&__name
+		color $darkgrey
+	&__prof
+		color $lightgreen
+
